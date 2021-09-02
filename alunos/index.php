@@ -6,8 +6,6 @@ include("./funcoes.php");
 
 situacaoAluno($alunos);
 
-
-
 // print_r($alunos);
 
 ?>
@@ -32,12 +30,16 @@ situacaoAluno($alunos);
                 <th>Nota</th>
                 <th>Situação</th>
             </tr>
-            <?php foreach ($alunos as $aluno) { ?>
+            <?php foreach ($alunos as $aluno) {
+
+                $aluno["nota"] >= 50 ? $class = "aprovado" : $class = "reprovado"
+
+            ?>
                 <tr>
                     <td><?= $aluno['nome'] ?></td>
                     <td><?= $aluno['idade'] ?></td>
                     <td><?= $aluno['nota'] ?></td>
-                    <td><?= isset($aluno['situacao']) ? $aluno["situacao"] : "" ?></td>
+                    <td class="<?= "$class" ?>"><?= isset($aluno['situacao']) ? $aluno["situacao"] : "" ?></td>
                 </tr>
             <?php } ?>
         </table>

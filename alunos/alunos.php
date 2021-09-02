@@ -39,7 +39,7 @@ $alunos = [
     [
         "nome" => "Inocêncio",
         "idade" => 66,
-        "nota" => 60
+        "nota" => 49
     ],
     [
         "nome" => "Flauta",
